@@ -1,3 +1,7 @@
+/* global app */
+
+(function () {
+
 function Manager (department, first, last, id, position) {
 
     // Inheritance (optinal)
@@ -38,7 +42,7 @@ Manager.prototype.hire = function (employee) {
         
     return false;
 
-}
+};
 
 Manager.prototype.fire = function (employee) {
 
@@ -50,8 +54,7 @@ Manager.prototype.fire = function (employee) {
 
     }
 
-}
-
+};
 
 Manager.prototype.findById = function (id) {
 
@@ -76,11 +79,11 @@ Manager.prototype.findById = function (id) {
 
     return null; 
 
-}
+};
 
 Manager.prototype.hasValidCredentials = function (employee) {
     
-    if (employee instanceof Employee) {
+    if (employee instanceof app.Employee) {
 
         var positions = this.roles[this.department];  
 
@@ -99,3 +102,13 @@ Manager.prototype.hasValidCredentials = function (employee) {
     return false;
     
 };
+
+Manager.prototype.toString = function () {
+
+    return "Boss of " + this.department;  
+
+};
+
+app.Manager = Manager;
+
+})(); 
