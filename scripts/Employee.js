@@ -20,6 +20,29 @@ Employee.prototype.getFullName =  function () {
 
 };
 
+/* 
+// another, cleaner way to do the same thing
+ 
+Employee.prototype = {
+
+    // when using this form though, since I replace the predefined
+    // prototype object, I must add a "constructor" property to my object
+    constructor: Employee,
+
+    firstname: null,
+    lastname: null,
+    employeeId: 0,
+    title: null,
+
+    getFullName: function () {
+
+        return this.firstname + " " +  this.lastname; 
+
+    }
+
+};
+*/
+
 app.Employee = Employee;
 
 })(); 
