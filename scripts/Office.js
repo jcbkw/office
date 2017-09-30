@@ -8,10 +8,12 @@ function Office (address) {
     this.managers = [];
 
 }
-
+//prototypal properties of office as each office will have different address
+//each office will have a different set of managers.
 Office.prototype.address = null;
 Office.prototype.managers = null;
 
+//prototypal methods of office.
 Office.prototype.countManagers = function (){
 
     return this.managers.length;
