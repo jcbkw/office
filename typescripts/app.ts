@@ -16,8 +16,8 @@ console.log(c.getId());
 
 // //Step (2) TS project - Work with Managers    
 // // create a manager
-let boss = new Manager("IT");
-
+let boss = new Manager("IT", "Anna", "Wilkins", 643, "Director of HTML5");
+console.log(boss.getFullName());
 // // hire someone
 boss.hire(a);
 

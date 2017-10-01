@@ -1,7 +1,7 @@
 import {Employee} from "./Employee";
 /// <reference path="./IRoles" />
 
-export class Manager {
+export class Manager extends Employee {
     // Here we are declaring a member of the class and assiging a value.
     // To declare a class member, start with its property access modifer (e.g. private, public) but not let or var (because it is a member, not a variable, duh)
     // There are 2 Array type notations in TypeScript:
@@ -15,16 +15,16 @@ export class Manager {
 
     };
  
-    constructor (private department: string/*, first, last, id, position*/) {
+    constructor (private department: string, first: string, last: string, id: number, position: string) {
 
     // Inheritance (optinal)
     // Employee.call(this, first, last, id, position);
-
+        super(first, last, id, position);
     }
 
     // Inheritance (optinal)
     // Manager.prototype = new Employee;
-    // constructor = Manager;
+    // Manager.prototype.constructor = Manager;
 
     static addRoles (department: string, role: string): void  {
         let departments: string[] = Manager.roles[department];

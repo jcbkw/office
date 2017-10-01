@@ -25,7 +25,8 @@ System.register(["./Manager", "./Employee"], function (exports_1, context_1) {
             console.log(c.getId());
             // //Step (2) TS project - Work with Managers    
             // // create a manager
-            boss = new Manager_1.Manager("IT");
+            boss = new Manager_1.Manager("IT", "Anna", "Wilkins", 643, "Director of HTML5");
+            console.log(boss.getFullName());
             // // hire someone
             boss.hire(a);
             console.log(boss.countEmployees());
