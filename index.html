@@ -3,13 +3,11 @@
     <head>
         <meta charset="UTF-8">  
         <title>The Office</title> 
-        <script src="scripts/boot.js"></script>
-        <script src="scripts/Employee.js"></script>
-        <script src="scripts/Manager.js"></script>
-        <script src="scripts/Address.js"></script>
-        <script src="scripts/Office.js"></script>
-
-        <script src="scripts/app.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/systemjs/0.20.19/system.js"></script>
+        <script>
+            System.config({packages:{scripts:{defaultExtension: 'js'}}});
+            System.import("scripts/app");
+        </script>
     </head>
     <body>
     </body>
