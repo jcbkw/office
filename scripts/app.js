@@ -1,7 +1,7 @@
-System.register(["./Manager", "./Employee"], function (exports_1, context_1) {
+System.register(["./Manager", "./Employee", "./Address"], function (exports_1, context_1) {
     "use strict";
     var __moduleName = context_1 && context_1.id;
-    var Manager_1, Employee_1, emp_25, a, b, c, boss, emp_26;
+    var Manager_1, Employee_1, Address_1, emp_25, a, b, c, boss, emp_26, myAddress;
     return {
         setters: [
             function (Manager_1_1) {
@@ -9,6 +9,9 @@ System.register(["./Manager", "./Employee"], function (exports_1, context_1) {
             },
             function (Employee_1_1) {
                 Employee_1 = Employee_1_1;
+            },
+            function (Address_1_1) {
+                Address_1 = Address_1_1;
             }
         ],
         execute: function () {
@@ -53,9 +56,10 @@ System.register(["./Manager", "./Employee"], function (exports_1, context_1) {
             // try hiring the QA resource again
             boss.hire(emp_26);
             console.log(boss.countEmployees());
-            // //Step (3) TS project - Work with Address    
-            // // create an address
-            // var myAddress = new app.Address(142, "Halsey Street", "Mainly", "NJ", "07845");
+            //Step (3) TS project - Work with Address    
+            // create an address
+            myAddress = new Address_1.Address(142, "Halsey Street", "Mainly", "NJ", "07845");
+            console.log(myAddress);
             // //Step (4) TS project - Work with Offices    
             // // create an office passing it the address
             // var myOffice = new	app.Office(myAddress);

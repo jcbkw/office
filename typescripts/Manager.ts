@@ -19,6 +19,7 @@ export class Manager extends Employee {
 
     // Inheritance (optinal)
     // Employee.call(this, first, last, id, position);
+    // With inheritance, the "super" function will be the first line executed.
         super(first, last, id, position);
     }
 

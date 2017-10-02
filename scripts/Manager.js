@@ -25,6 +25,7 @@ System.register(["./Employee"], function (exports_1, context_1) {
                     var _this = 
                     // Inheritance (optinal)
                     // Employee.call(this, first, last, id, position);
+                    // With inheritance, the "super" function will be the first line executed.
                     _super.call(this, first, last, id, position) || this;
                     _this.department = department;
                     // Here we are declaring a member of the class and assiging a value.

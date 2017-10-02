@@ -1,5 +1,6 @@
 import {Manager} from "./Manager";
 import {Employee} from "./Employee";
+import {Address} from "./Address";
 //(function () {
 
 // ----Step (1) TS project - Work with Employees 
@@ -59,12 +60,10 @@ boss.hire(emp_26);
 
 console.log(boss.countEmployees());
 
-// //Step (3) TS project - Work with Address    
-// // create an address
-// var myAddress = new app.Address(142, "Halsey Street", "Mainly", "NJ", "07845");
-
-
-
+//Step (3) TS project - Work with Address    
+// create an address
+let myAddress = new Address(142, "Halsey Street", "Mainly", "NJ", "07845");
+console.log(myAddress);
 // //Step (4) TS project - Work with Offices    
 // // create an office passing it the address
 // var myOffice = new	app.Office(myAddress);
