@@ -10,11 +10,7 @@ export class Address {
 
     getAddress (): string {
 
-        return   this.streetNumber 
-        + " "  + this.streetName 
-        + ", " + this.city 
-        + " "  + this.state 
-        + " "  + this.zip;
+        return   `${this.streetNumber} ${this.streetName} ${this.city} ${this.state} ${this.zip}`;
 
     };
 

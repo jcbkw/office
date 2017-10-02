@@ -1,17 +1,20 @@
-System.register(["./Manager", "./Employee", "./Address"], function (exports_1, context_1) {
+System.register(["./Office", "./Address", "./Manager", "./Employee"], function (exports_1, context_1) {
     "use strict";
     var __moduleName = context_1 && context_1.id;
-    var Manager_1, Employee_1, Address_1, emp_25, a, b, c, boss, emp_26, myAddress;
+    var Office_1, Address_1, Manager_1, Employee_1, emp_25, a, b, c, boss, emp_26, myAddress, myOffice;
     return {
         setters: [
+            function (Office_1_1) {
+                Office_1 = Office_1_1;
+            },
+            function (Address_1_1) {
+                Address_1 = Address_1_1;
+            },
             function (Manager_1_1) {
                 Manager_1 = Manager_1_1;
             },
             function (Employee_1_1) {
                 Employee_1 = Employee_1_1;
-            },
-            function (Address_1_1) {
-                Address_1 = Address_1_1;
             }
         ],
         execute: function () {
@@ -60,17 +63,17 @@ System.register(["./Manager", "./Employee", "./Address"], function (exports_1, c
             // create an address
             myAddress = new Address_1.Address(142, "Halsey Street", "Mainly", "NJ", "07845");
             console.log(myAddress);
-            // //Step (4) TS project - Work with Offices    
-            // // create an office passing it the address
-            // var myOffice = new	app.Office(myAddress);
-            // // add a manager and its staff to the office
-            // myOffice.addManager(boss);
-            // console.log(myOffice.getAddress().toString());
-            // myOffice.getManagerByDepartment('IT');
-            // console.log(myOffice.getManagerByDepartment('IT').countEmployees());
-            // console.log(myOffice.countEmployees());
-            // myOffice.getEmployeeById(21);
-            // myOffice.getManagerByDepartment('IT').findById(22);
+            //Step (4) TS project - Work with Offices    
+            // create an office passing it the address
+            myOffice = new Office_1.Office(myAddress);
+            // add a manager and its staff to the office
+            myOffice.addManager(boss);
+            console.log(myOffice.getAddress().toString());
+            console.log(myOffice.getManagerByDepartment('IT'));
+            console.log(myOffice.getManagerByDepartment('IT').countEmployees());
+            console.log(myOffice.countEmployees());
+            console.log(myOffice.getEmployeeById(21));
+            console.log(myOffice.getManagerByDepartment('IT').findById(22));
             //})();   
         }
     };

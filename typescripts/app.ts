@@ -1,6 +1,7 @@
+import {Office} from "./Office";
+import {Address} from "./Address";
 import {Manager} from "./Manager";
 import {Employee} from "./Employee";
-import {Address} from "./Address";
 //(function () {
 
 // ----Step (1) TS project - Work with Employees 
@@ -44,7 +45,7 @@ boss.hire(null);
 console.log(boss.countEmployees());
 
 // create a QA employee
-var emp_26 = new Employee("Bahavana", "Madhav", 178, "QA"); 
+let emp_26 = new Employee("Bahavana", "Madhav", 178, "QA"); 
 
 // try to hire a QA, but there's no QA department
 boss.hire(emp_26);
@@ -64,23 +65,24 @@ console.log(boss.countEmployees());
 // create an address
 let myAddress = new Address(142, "Halsey Street", "Mainly", "NJ", "07845");
 console.log(myAddress);
-// //Step (4) TS project - Work with Offices    
-// // create an office passing it the address
-// var myOffice = new	app.Office(myAddress);
 
-// // add a manager and its staff to the office
-// myOffice.addManager(boss);
+//Step (4) TS project - Work with Offices    
+// create an office passing it the address
+let myOffice = new Office(myAddress);
 
-// console.log(myOffice.getAddress().toString());
+// add a manager and its staff to the office
+myOffice.addManager(boss);
 
-// myOffice.getManagerByDepartment('IT');
+console.log(myOffice.getAddress().toString());
 
-// console.log(myOffice.getManagerByDepartment('IT').countEmployees());
+console.log(myOffice.getManagerByDepartment('IT'));
 
-// console.log(myOffice.countEmployees());
+console.log(myOffice.getManagerByDepartment('IT').countEmployees());
 
-// myOffice.getEmployeeById(21);
+console.log(myOffice.countEmployees());
 
-// myOffice.getManagerByDepartment('IT').findById(22);
+console.log(myOffice.getEmployeeById(21));
+
+console.log(myOffice.getManagerByDepartment('IT').findById(22));
 
 //})();  

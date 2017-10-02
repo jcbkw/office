@@ -3,7 +3,7 @@ import {Employee} from "./Employee";
 
 export class Manager extends Employee {
     // Here we are declaring a member of the class and assiging a value.
-    // To declare a class member, start with its property access modifer (e.g. private, public) but not let or var (because it is a member, not a variable, duh)
+    // To declare a class member, start with its property access modifer (e.g. private, public) but not let or let (because it is a member, not a letiable, duh)
     // There are 2 Array type notations in TypeScript:
     // TypeName[]
     // Array<TypeName>
@@ -33,6 +33,12 @@ export class Manager extends Employee {
             departments.push(role);
         }
     }
+    
+    getManagerTitle (): string {
+
+        return this.department;
+
+    }
 
     countEmployees (): number {
 
@@ -56,7 +62,7 @@ export class Manager extends Employee {
 
     fire  (employee: Employee):void {
 
-        var index = this.staff.indexOf(employee);
+        let index = this.staff.indexOf(employee);
 
         if (index !== -1) {
 
@@ -70,10 +76,10 @@ export class Manager extends Employee {
 
         if (id) {
     
-            var staffsize  = this.staff.length,
+            let staffsize  = this.staff.length,
                 employee = null;
             
-            for (var i = 0; i < staffsize; i+=1 ) {
+            for (let i = 0; i < staffsize; i+=1 ) {
 
                 employee = this.staff[i];
 
@@ -95,7 +101,7 @@ export class Manager extends Employee {
         
         if (employee instanceof Employee) {
 
-            var positions = Manager.roles[this.department];  
+            let positions = Manager.roles[this.department];  
 
             if (positions) {
 

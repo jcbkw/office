@@ -29,7 +29,7 @@ System.register(["./Employee"], function (exports_1, context_1) {
                     _super.call(this, first, last, id, position) || this;
                     _this.department = department;
                     // Here we are declaring a member of the class and assiging a value.
-                    // To declare a class member, start with its property access modifer (e.g. private, public) but not let or var (because it is a member, not a variable, duh)
+                    // To declare a class member, start with its property access modifer (e.g. private, public) but not let or let (because it is a member, not a letiable, duh)
                     // There are 2 Array type notations in TypeScript:
                     // TypeName[]
                     // Array<TypeName>
@@ -44,6 +44,9 @@ System.register(["./Employee"], function (exports_1, context_1) {
                     if (departments) {
                         departments.push(role);
                     }
+                };
+                Manager.prototype.getManagerTitle = function () {
+                    return this.department;
                 };
                 Manager.prototype.countEmployees = function () {
                     return this.staff.length;

@@ -19,11 +19,7 @@ System.register([], function (exports_1, context_1) {
                     this.zip = zip;
                 }
                 Address.prototype.getAddress = function () {
-                    return this.streetNumber
-                        + " " + this.streetName
-                        + ", " + this.city
-                        + " " + this.state
-                        + " " + this.zip;
+                    return this.streetNumber + " " + this.streetName + " " + this.city + " " + this.state + " " + this.zip;
                 };
                 ;
                 Address.prototype.toString = function () {
