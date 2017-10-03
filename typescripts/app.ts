@@ -2,7 +2,6 @@ import {Office} from "./Office";
 import {Address} from "./Address";
 import {Manager} from "./Manager";
 import {Employee} from "./Employee";
-//(function () {
 
 // ----Step (1) TS project - Work with Employees 
 // ----Next - use the export feature for app.js to avoid global variables.    
@@ -84,5 +83,3 @@ console.log(myOffice.countEmployees());
 console.log(myOffice.getEmployeeById(21));
 
 console.log(myOffice.getManagerByDepartment('IT').findById(22));
-
-//})();  

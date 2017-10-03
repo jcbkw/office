@@ -39,7 +39,7 @@ System.register(["./Manager"], function (exports_1, context_1) {
                         var staffsize = this.managers.length, manager = null;
                         for (var i = 0; i < staffsize; i += 1) {
                             manager = this.managers[i];
-                            if (department === manager.getManagerTitle()) {
+                            if (department === manager.getManagerDepartment()) {
                                 return manager;
                             }
                         }

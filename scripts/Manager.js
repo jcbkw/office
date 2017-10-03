@@ -45,7 +45,10 @@ System.register(["./Employee"], function (exports_1, context_1) {
                         departments.push(role);
                     }
                 };
-                Manager.prototype.getManagerTitle = function () {
+                /**
+                 * Returns a string
+                 */
+                Manager.prototype.getManagerDepartment = function () {
                     return this.department;
                 };
                 Manager.prototype.countEmployees = function () {

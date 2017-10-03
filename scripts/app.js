@@ -18,7 +18,6 @@ System.register(["./Office", "./Address", "./Manager", "./Employee"], function (
             }
         ],
         execute: function () {
-            //(function () {
             // ----Step (1) TS project - Work with Employees 
             // ----Next - use the export feature for app.js to avoid global variables.    
             // use cases
@@ -74,7 +73,6 @@ System.register(["./Office", "./Address", "./Manager", "./Employee"], function (
             console.log(myOffice.countEmployees());
             console.log(myOffice.getEmployeeById(21));
             console.log(myOffice.getManagerByDepartment('IT').findById(22));
-            //})();   
         }
     };
 });

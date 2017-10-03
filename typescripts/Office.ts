@@ -51,7 +51,7 @@ export class Office {
 
                 manager = this.managers[i];
 
-                if (department === manager.getManagerTitle()) {
+                if (department === manager.getManagerDepartment()) {
 
                     return manager;
 

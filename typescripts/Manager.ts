@@ -15,7 +15,12 @@ export class Manager extends Employee {
 
     };
  
-    constructor (private department: string, first: string, last: string, id: number, position: string) {
+    constructor (
+        private department: string, 
+         first: string, 
+         last: string, 
+         id: number, 
+         position: string) {
 
     // Inheritance (optinal)
     // Employee.call(this, first, last, id, position);
@@ -33,8 +38,10 @@ export class Manager extends Employee {
             departments.push(role);
         }
     }
-    
-    getManagerTitle (): string {
+    /**
+     * Returns a string 
+     */
+    getManagerDepartment (): string {
 
         return this.department;
 
